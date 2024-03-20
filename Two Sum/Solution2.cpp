@@ -15,8 +15,9 @@ public:
         for(int i=0,j = size-1; i<j;){
             int sum = nums[i] + nums[j];
             if(sum == target){
-                result.push_back(i+1);
-                result.push_back(j+1);
+                result.push_back(i);
+                result.push_back(j);
+                break;
 
             } else if(sum < target){
                 // we need to increase the value, as nums is arranged in asc order 
@@ -39,7 +40,7 @@ int main()
     int t3 = 6;
 
     Solution s;
-    vector<int> result = s.twoSum(v3, t3);
+    vector<int> result = s.twoSum(v1, t1);
     cout<<"two Sum: \n";
     for (int i = 0; i < result.size(); i++) {
         cout << result[i] << "  ";
