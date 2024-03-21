@@ -7,6 +7,7 @@ public:
     vector<int> twoSum(vector<int> &nums, int target){
         int size = nums.size();
         vector<int> result;
+        vector<int> orig = nums;
         sort(nums.begin(), nums.end()); // Time complexity: O(nlogn);
         /**
          * @brief Two Pointer concept
@@ -15,8 +16,13 @@ public:
         for(int i=0,j = size-1; i<j;){
             int sum = nums[i] + nums[j];
             if(sum == target){
-                result.push_back(i);
-                result.push_back(j);
+                auto start = std::find(orig.begin(), orig.end(), nums[i]);// - orig.begin();
+                auto end = std::find(orig.begin(), orig.end(), nums[j]);
+                if(start == end && end != orig.end()) {
+                    end = std::find(end+1, orig.end(), nums[j]);// - orig.begin();
+                }
+                result.push_back(start - orig.begin());
+                result.push_back(end - orig.begin());
                 break;
 
             } else if(sum < target){
