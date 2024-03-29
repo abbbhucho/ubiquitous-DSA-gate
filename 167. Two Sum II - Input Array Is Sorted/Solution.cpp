@@ -14,9 +14,9 @@ public:
                 result = {i, j};
                 break;
             } else if(rem < numbers[j]) {
-                i++;
-            } else {
                 j--;
+            } else {
+                i++;
             }
         }
         return result;
@@ -35,9 +35,9 @@ int main()
     int t3 = -1;
 
     Solution s;
-    vector<int> result = s.twoSum(v1, t1);
+      vector<int> result = s.twoSum(v1, t1);
     for(auto i:result){
-        cout << i << " ";
+        cout << result[i] << " ";
     }
     cout << '\n';
     return 0;
