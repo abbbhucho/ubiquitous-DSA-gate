@@ -11,7 +11,7 @@ public:
         while(i < j){
             int rem = target - numbers[i];
             if(rem == numbers[j]){
-                result = {i, j};
+                result = {i+1, j+1};
                 break;
             } else if(rem < numbers[j]) {
                 j--;
