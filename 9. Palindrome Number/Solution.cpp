@@ -5,6 +5,10 @@ using namespace std;
 class Solution{
 public:
     bool isPalindrome(int x) {
+        // As we know negative numbers are not palindrome
+        if(x < 0) 
+            return false;
+
         vector<int> digits;
         int i = 0;
         while( x != 0 ){
@@ -23,7 +27,8 @@ public:
 
 int main()
 {
-    int t;
+    int t = 0;
+    cin >> t;
     while( t-- ){
         int n1;
         cin >> n1;
