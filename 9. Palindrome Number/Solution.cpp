@@ -10,14 +10,14 @@ public:
             return false;
 
         vector<int> digits;
-        int i = 0;
+        // int i = 0;
         while( x != 0 ){
             digits.push_back(x % 10);
             x = x/10;
-            i++;
+            // i++;
         }
-        for(int j=0; j <= i; j++, i--){
-            if(digits[j] != digits[i-1]){
+        for(int j=0, i = digits.size()-1; j <= i; j++, i--){
+            if(digits[j] != digits[i]){
                 return false;
             }
         }
@@ -33,7 +33,7 @@ int main()
         int n1;
         cin >> n1;
         Solution s;
-        cout<< "palindrome or not: " << std::boolalpha << s.isPalindrome(n1);
+        cout<< "palindrome or not: " << std::boolalpha << s.isPalindrome(n1) << "\n";
     
     }
     // int n1 = 121;
