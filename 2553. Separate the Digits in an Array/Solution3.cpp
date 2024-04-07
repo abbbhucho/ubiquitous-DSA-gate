@@ -8,7 +8,7 @@ public:
         for(auto num:nums){
             string n = to_string(num);
             for(auto x:n){
-                ans.push_back(x-'0');
+                ans.push_back(x-'0'); // any single char subtracted by '0' converts it to int
             }
         }
         return ans;
