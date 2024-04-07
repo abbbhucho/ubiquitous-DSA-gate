@@ -3,6 +3,14 @@ using namespace std;
 
 class Solution {
 public:
+/**
+ * @brief separate digits from a list of integer numbers
+ * 
+ * @param nums 
+ * @return vector<int>
+ * 
+ * Time Complexity: O(n^2) 
+ */
     vector<int> separateDigits(vector<int>& nums) {
         vector<int> digits = {}, result = {};
         for(int i=0; i < nums.size(); i++){
