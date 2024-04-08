@@ -3,6 +3,13 @@ using namespace std;
 
 class Solution {
 public:
+/**
+ * Time complexity
+ * O(n * m) : n - length of array, m - average length of string
+ * 
+ * @param nums 
+ * @return vector<int> 
+ */
     vector<int> separateDigits(vector<int>& nums) {
         vector<int> ans;
         for(auto num:nums){
