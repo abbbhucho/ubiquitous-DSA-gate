@@ -1,3 +1,14 @@
+/**
+ * WRONG SOLUTION
+ * WRONG SOLUTION
+ * WRONG SOLUTION 
+ * WRONG SOLUTION
+ * @date 2024-04-12
+ * 
+ * WRONG SOLUTION
+ * 
+ */
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -18,7 +29,6 @@ public:
         string op = "";
         stack<TreeNode *> st;
         while((t->left != NULL || t->right != NULL) || !st.empty()){
-            // if(str.find())
             t == root ? op.append(to_string(t->val)) : op.append("->" + to_string(t->val));
             if(t->left != NULL){
                 st.emplace(t);
@@ -40,6 +50,7 @@ public:
                     op.erase(op.end()-3);
                 }
                 st.pop();
+                TreeNode *p = st.top();
                 op.erase(op.end()-3);
                 // if(t->right != NULL) {
                 //     st.emplace(t);     
