@@ -1,5 +1,6 @@
 ## 257. Binary Tree Paths
 
+[Leetcode](https://leetcode.com/problems/binary-tree-paths/)
 > Easy
 
 Given the root of a binary tree, return all root-to-leaf paths in any order.
