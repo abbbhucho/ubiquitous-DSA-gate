@@ -11,7 +11,7 @@ public:
         if(low > high) {
             return -1;
         }
-        int mid = low + ((high - low) >> 1); // to avoid overflow
+        int mid = low + ((high - low) / 2); // to avoid overflow
         if (arr[mid] == target) {
             return mid;
         }
